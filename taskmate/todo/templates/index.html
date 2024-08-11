@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Welcome to Task Todo</title>
+{% endblock %}
+
+{% block content %}
+    <div class="containter">
+        <!-- <h1>{{ index_text }}</h1> -->
+         <div class="row mt-5 ml-5 mr-5">
+            <div class="col-lg-4">
+                <img src="{% static 'images/post-its.jpg' %}" alt="Notes" width="300" height="250" class="rounded shadow">
+            </div>
+            <div class="col-lg-4">
+                <img src="{% static 'images/post-its.jpg' %}" alt="Notes" width="300" height="250" class="rounded shadow">
+            </div>
+            <div class="col-lg-4">
+                <img src="{% static 'images/post-its.jpg' %}" alt="Notes" width="300" height="250" class="rounded shadow">
+            </div>
+         </div>
+         <div class="row mt-5">
+            <div class="col-md-10 offset-md-1">
+                <center><p class="h1 text-primary">Plan your tasks.</p></center>
+                <center><p class="h2 mt-3">Track your progress and see where it will take you! You'll be amazed at yourself!</p></center>
+                <center><p class="h5">Also marvel at your ability to track your tasks anywhere you go! So you can never escape work!</p></center>
+                <center><a href="{% url 'todolist' %}"><button type="button" class="btn btn-primary btn-lg mt-3 mb-5 shadow">Let's get started</button></a>
+                </center>
+            </div>
+         </div>
+    </div>
+{% endblock content %}
